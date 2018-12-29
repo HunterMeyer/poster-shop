@@ -117,10 +117,7 @@ body {
 }
 
 .search-bar > input[type=submit] {
-  background-color: #fdd922;
-  color: #333333;
   padding: 1rem;
-  border: 1px solid #e0bc27;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   font-size: 0.8rem;
