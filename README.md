@@ -2,15 +2,15 @@
 
 Source code for the case-study project from the course [Build Your First Vue.js App](https://vuejsdevelopers.teachable.com/p/build-your-first-vue-js-app)
 
-#### Demo
+#### Screenshot
 
-See the completed project here: [http://poster-shop.vuejsdevelopers.com/](http://poster-shop.vuejsdevelopers.com/)
+![screenshot](public/screenshot.png)
 
 #### Pre-installation
 
 Ensure [Node.js  >=4](https://nodejs.org/en/download/), [NPM](https://docs.npmjs.com) and [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) are installed on your system
- 
-#### Installation
+
+#### Run the App
 
 1. Install this code on your local system
      
@@ -42,18 +42,3 @@ Ensure [Node.js  >=4](https://nodejs.org/en/download/), [NPM](https://docs.npmjs
     ```
 
 5. Your site will be available at *localhost:3000*.
-
-#### Lecture branches
-
-Note that branches in the repo named `lecture/xxx` correspond to course lectures.
-
-## Troubleshooting
-
-Here are some common mistakes people make, check these before filing an issue:
-
-- `EADDRINUSE :::3000`. You already have another application using port 3000. Either end it, or change manually set the `PORT` environment variable to resolve the conflict e.g. `3001`
-- Ensure you have a version of Node >= 4
-
-```
-node -v
-```
