@@ -2,13 +2,11 @@ new Vue({
   el: "#app",
   data: {
     total: 0,
-    products: [
-      { id: 1, title: "Large Poster",  price: 9.99 },
-      { id: 2, title: "Medium Poster", price: 8.99 },
-      { id: 3, title: "Small Poster",  price: 7.99 }
-    ],
+    products: [],
     cart: [],
-    search: ""
+    search: "cat",
+    lastSearch: "",
+    loading: false
   },
   methods: {
     addToCart: function(product) {
@@ -41,13 +39,24 @@ new Vue({
       }
     },
     onSubmit: function() {
-
+      this.products = [];
+      this.loading = true;
+      var path = "/search?q=".concat(this.search);
+      this.$http.get(path)
+        .then(function(response) {
+          this.products = response.body;
+          this.lastSearch = this.search;
+          this.loading = false;
+        });
     }
   },
   filters: {
     currency: function(price) {
       return "$".concat(price.toFixed(2));
     }
+  },
+  created: function() {
+    this.onSubmit();
   }
 });
 
